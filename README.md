@@ -1,6 +1,6 @@
-# Kotlin Spring Boot MVC 예제 (Java 프로젝트 클론)
+# Kotlin Spring Boot MVC Example (Java Project Clone)
 
-이 저장소는 `spring-boot-mvc` Java 예제를 Kotlin으로 클론한 간단한 Spring Boot 예제입니다. 학습 목적의 예제로 아래 기능을 포함합니다:
+This repository is a simple Spring Boot example created by porting the Java example [spring-boot-mvc](https://github.com/ynng3/spring-boot-mvc) to Kotlin. It is intended for learning purposes and includes the following features:
 
 1. Create
 2. Update
@@ -8,9 +8,9 @@
 4. Read
 5. Login
 
-비밀번호는 `BCrypt` 해싱으로 저장합니다.
+Passwords are stored using `BCrypt` hashing.
 
-## 기술 스택
+## Tech Stack
 
 - Kotlin 1.9
 - Java 17
@@ -18,35 +18,35 @@
 - Spring Web
 - Spring Data JPA
 - Spring Security Crypto (BCrypt)
-- H2 (기본, 개발용)
+- H2 (default, for development)
 
-프로덕션에서 PostgreSQL을 사용하려면 `src/main/resources/application.yml`을 수정해 주세요.
+To use PostgreSQL in production, update `src/main/resources/application.yml`.
 
-## 빠른 시작
+## Quick Start
 
-Windows에서 Gradle Wrapper로 실행:
+Run with the Gradle Wrapper on Windows:
 
 ```powershell
 ./gradlew.bat bootRun
 ```
 
-또는 Unix 계열:
+Or on Unix-based systems:
 
 ```bash
 ./gradlew bootRun
 ```
 
-기본 설정은 `src/main/resources/application.yml`에 H2 인메모리 DB로 되어 있으며, 포트는 `8080`입니다.
+The default setup uses an H2 in-memory database in `src/main/resources/application.yml`, and the application runs on port `8080`.
 
-## 데이터베이스 (Postgres로 전환할 경우)
+## Database (When Switching to PostgreSQL)
 
-Postgres를 사용하려면 데이터베이스를 생성하세요:
+Create a PostgreSQL database first:
 
 ```sql
 CREATE DATABASE spring_mvc_db;
 ```
 
-그리고 `application.yml`의 `spring.datasource` 설정을 아래 예시처럼 변경하세요:
+Then update the `spring.datasource` settings in `application.yml` as shown below:
 
 ```yaml
 spring:
@@ -102,6 +102,6 @@ Base URL: `http://localhost:8080`
 }
 ```
 
-## 메모
+## Notes
 
-이 프로젝트는 학습 및 실험용입니다. 원본 Java 예제의 구조와 기능을 Kotlin으로 포팅했습니다.
+This project is for learning and experimentation. It ports the original Java example's structure and functionality to Kotlin.
